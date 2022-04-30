@@ -1,0 +1,39 @@
+{
+    "name": "ybelenko/dtf-dbs-client",
+    "description": "API client of DTF API for Dealer Business System",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ybelenko\\DtfDbsClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yuriy Belenko",
+            "email": "yura-bely@mail.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "php-http/multipart-stream-builder": "^1.2",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.8",
+        "guzzlehttp/guzzle": "^7.4",
+        "phpunit/phpunit": "^9.5"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        },
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpunit",
+        "fixer": "php-cs-fixer fix --allow-risky=yes -vv"
+    }
+}
