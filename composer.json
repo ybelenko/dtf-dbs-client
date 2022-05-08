@@ -27,9 +27,6 @@
         "phpunit/phpunit": "^9.5"
     },
     "config": {
-        "platform": {
-            "php": "7.4"
-        },
         "sort-packages": true
     },
     "scripts": {
