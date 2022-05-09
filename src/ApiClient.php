@@ -74,7 +74,7 @@ class ApiClient // implements LoggerAwareInterface
         if ($response->getStatusCode() === 401 && $newToken = $this->obtainAccessToken()) {
             // access token can be expired, refresh and try again
             $this->config->setAccessToken($newToken);
-            $request = $this->config->buildFileListRequest($file, $fileName, $overWrite);
+            $request = $this->config->buildFileUploadRequest($file, $fileName, $overWrite);
             $response = $this->processHttpRequest($request);
         }
 
