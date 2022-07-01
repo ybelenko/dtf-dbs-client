@@ -3,6 +3,12 @@
     "description": "API client of DTF API for Dealer Business System",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "DTF",
+        "DBS",
+        "API",
+        "client"
+    ],
     "autoload": {
         "psr-4": {
             "Ybelenko\\DtfDbsClient\\": "src/"
