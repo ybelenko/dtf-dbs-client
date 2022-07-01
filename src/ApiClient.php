@@ -8,12 +8,9 @@
 namespace Ybelenko\DtfDbsClient;
 
 use Psr\Http\Client\ClientExceptionInterface;
-use Psr\Http\Client\ClientInterface;
 use Psr\Http\Client\NetworkExceptionInterface;
 use Psr\Http\Client\RequestExceptionInterface;
 use Psr\Http\Message\RequestInterface;
-// use Psr\Log\LoggerAwareInterface;
-// use Psr\Log\LoggerAwareTrait;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\StreamInterface;
 use Ybelenko\DtfDbsClient\ApiClientConfig;
@@ -22,10 +19,8 @@ use Ybelenko\DtfDbsClient\Exceptions\HttpClientException;
 use Ybelenko\DtfDbsClient\Exceptions\OktaAuthErrorException;
 use Ybelenko\DtfDbsClient\Exceptions\UnsupportedResponseException;
 
-class ApiClient // implements LoggerAwareInterface
+class ApiClient
 {
-    // use LoggerAwareTrait;
-
     /** @var ApiClientConfig */
     protected $config;
 
