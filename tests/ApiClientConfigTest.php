@@ -173,15 +173,15 @@ final class ApiClientConfigTest extends TestCase
         return [
             'qual' => [
                 'qual',
-                'https://servicesextqual.tal.deere.com/dtfapi',
+                'https://dtfapiqual.deere.com',
             ],
             'cert' => [
                 'cert',
-                'https://servicesextcert.deere.com/dtfapi',
+                'https://dtfapicert.deere.com',
             ],
             'prod' => [
                 'prod',
-                'https://servicesext.deere.com/dtfapi',
+                'https://dtfapi.deere.com',
             ],
         ];
     }
@@ -307,7 +307,7 @@ final class ApiClientConfigTest extends TestCase
                 null,
                 null,
                 (string)$guzzleFactory->createUri(ApiClientConfig::getApiBasePathUrl('prod'))
-                    ->withPath('/dtfapi/dbs/dealer/test01/files'),
+                    ->withPath('/dbs/dealer/test01/files'),
                 "Bearer {$accessToken}",
                 $guzzleFactory->createStreamFromFile(__DIR__ . '/samplecommonfile.txt'),
             ],
@@ -317,7 +317,7 @@ final class ApiClientConfigTest extends TestCase
                 null,
                 null,
                 (string)$guzzleFactory->createUri(ApiClientConfig::getApiBasePathUrl('prod'))
-                    ->withPath('/dtfapi/dbs/dealer/test01/files'),
+                    ->withPath('/dbs/dealer/test01/files'),
                 "Bearer {$accessToken}",
                 $guzzleFactory->createStreamFromFile(__DIR__ . '/samplecommonfile.txt'),
             ],
@@ -327,7 +327,7 @@ final class ApiClientConfigTest extends TestCase
                 null,
                 null,
                 (string)$guzzleFactory->createUri(ApiClientConfig::getApiBasePathUrl('prod'))
-                    ->withPath('/dtfapi/dbs/dealer/test01/files'),
+                    ->withPath('/dbs/dealer/test01/files'),
                 "Bearer {$accessToken}",
                 $guzzleFactory->createStreamFromFile(__DIR__ . '/samplecommonfile.txt'),
             ],
@@ -337,7 +337,7 @@ final class ApiClientConfigTest extends TestCase
                 'Screen Recording at 2022-04-01 12:34:56.mp4',
                 null,
                 (string)$guzzleFactory->createUri(ApiClientConfig::getApiBasePathUrl('prod'))
-                    ->withPath('/dtfapi/dbs/dealer/test01/files')
+                    ->withPath('/dbs/dealer/test01/files')
                     ->withQuery(\http_build_query(['fileName' => 'Screen Recording at 2022-04-01 12:34:56.mp4'])),
                 "Bearer {$accessToken}",
                 $guzzleFactory->createStreamFromFile(__DIR__ . '/samplecommonfile.txt'),
@@ -348,7 +348,7 @@ final class ApiClientConfigTest extends TestCase
                 null,
                 true,
                 (string)$guzzleFactory->createUri(ApiClientConfig::getApiBasePathUrl('prod'))
-                    ->withPath('/dtfapi/dbs/dealer/test01/files')
+                    ->withPath('/dbs/dealer/test01/files')
                     ->withQuery(\http_build_query(['overWrite' => 'True'])),
                 "Bearer {$accessToken}",
                 $guzzleFactory->createStreamFromFile(__DIR__ . '/samplecommonfile.txt'),
@@ -359,7 +359,7 @@ final class ApiClientConfigTest extends TestCase
                 'Screen Recording at 2022-04-01 12:34:56.mp4',
                 true,
                 (string)$guzzleFactory->createUri(ApiClientConfig::getApiBasePathUrl('prod'))
-                    ->withPath('/dtfapi/dbs/dealer/test01/files')
+                    ->withPath('/dbs/dealer/test01/files')
                     ->withQuery(\http_build_query([
                         'fileName' => 'Screen Recording at 2022-04-01 12:34:56.mp4',
                         'overWrite' => 'True'
@@ -403,7 +403,7 @@ final class ApiClientConfigTest extends TestCase
                     ->setEnvironment('cert')
                     ->setAccessToken($accessToken),
                 (string)$guzzleFactory->createUri(ApiClientConfig::getApiBasePathUrl('cert'))
-                    ->withPath('/dtfapi/dbs/dealer/test01/files'),
+                    ->withPath('/dbs/dealer/test01/files'),
                 "Bearer {$accessToken}",
                 'application/json',
             ],
@@ -413,7 +413,7 @@ final class ApiClientConfigTest extends TestCase
                     ->setEnvironment('prod')
                     ->setAccessToken($accessToken),
                 (string)$guzzleFactory->createUri(ApiClientConfig::getApiBasePathUrl('prod'))
-                    ->withPath('/dtfapi/dbs/dealer/06DV01/files'),
+                    ->withPath('/dbs/dealer/06DV01/files'),
                 "Bearer {$accessToken}",
                 'application/json',
             ],
@@ -455,7 +455,7 @@ final class ApiClientConfigTest extends TestCase
                     ->setAccessToken($accessToken),
                 'samplecommonfile.txt',
                 (string)$guzzleFactory->createUri(ApiClientConfig::getApiBasePathUrl('cert'))
-                    ->withPath('/dtfapi/dbs/dealer/test01/files/samplecommonfile.txt'),
+                    ->withPath('/dbs/dealer/test01/files/samplecommonfile.txt'),
                 "Bearer {$accessToken}",
                 'application/json',
             ],
@@ -466,7 +466,7 @@ final class ApiClientConfigTest extends TestCase
                     ->setAccessToken($accessToken),
                 'Screen Recording at 2022-04-01 12:34:56.mp4',
                 (string)$guzzleFactory->createUri(ApiClientConfig::getApiBasePathUrl('prod'))
-                    ->withPath('/dtfapi/dbs/dealer/06DV01/files/' . \rawurlencode('Screen Recording at 2022-04-01 12:34:56.mp4')),
+                    ->withPath('/dbs/dealer/06DV01/files/' . \rawurlencode('Screen Recording at 2022-04-01 12:34:56.mp4')),
                 "Bearer {$accessToken}",
                 'application/json',
             ],
@@ -508,7 +508,7 @@ final class ApiClientConfigTest extends TestCase
                     ->setAccessToken($accessToken),
                 'samplecommonfile.txt',
                 (string)$guzzleFactory->createUri(ApiClientConfig::getApiBasePathUrl('cert'))
-                    ->withPath('/dtfapi/dbs/dealer/test01/files/samplecommonfile.txt/details'),
+                    ->withPath('/dbs/dealer/test01/files/samplecommonfile.txt/details'),
                 "Bearer {$accessToken}",
                 'application/json',
             ],
@@ -519,7 +519,7 @@ final class ApiClientConfigTest extends TestCase
                     ->setAccessToken($accessToken),
                 'Screen Recording at 2022-04-01 12:34:56.mp4',
                 (string)$guzzleFactory->createUri(ApiClientConfig::getApiBasePathUrl('prod'))
-                    ->withPath('/dtfapi/dbs/dealer/06DV01/files/' . \rawurlencode('Screen Recording at 2022-04-01 12:34:56.mp4')) . '/details',
+                    ->withPath('/dbs/dealer/06DV01/files/' . \rawurlencode('Screen Recording at 2022-04-01 12:34:56.mp4')) . '/details',
                 "Bearer {$accessToken}",
                 'application/json',
             ],

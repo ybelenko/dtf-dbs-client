@@ -320,11 +320,11 @@ class ApiClientConfig
     {
         switch ($environment) {
             case 'qual':
-                return 'https://servicesextqual.tal.deere.com/dtfapi';
+                return 'https://dtfapiqual.deere.com';
             case 'cert':
-                return 'https://servicesextcert.deere.com/dtfapi';
+                return 'https://dtfapicert.deere.com';
             case 'prod':
-                return 'https://servicesext.deere.com/dtfapi';
+                return 'https://dtfapi.deere.com';
             default:
                 throw new \InvalidArgumentException('DTF DBS API Client: Unknown environment to get API base path');
         }

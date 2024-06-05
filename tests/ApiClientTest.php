@@ -570,7 +570,7 @@ final class ApiClientTest extends TestCase
                 'links' => [
                     [
                         'rel' => 'self',
-                        'href' => 'https://servicesext.deere.com/dtfapi/dbs/dealer/test01/files'
+                        'href' => 'https://dtfapi.deere.com/dbs/dbs/dealer/test01/files'
                     ]
                 ],
             ]))
@@ -592,7 +592,7 @@ final class ApiClientTest extends TestCase
                         'links' => [
                             [
                                 'rel' => 'self',
-                                'href' => 'https://servicesextcert.deere.com/dtfapi/dbs/dealer/06DV01/files/samplecommonfile.txt',
+                                'href' => 'https://dtfapicert.deere.com/dbs/dealer/06DV01/files/samplecommonfile.txt',
                             ],
                         ],
                     ],
@@ -600,7 +600,7 @@ final class ApiClientTest extends TestCase
                 'links' => [
                     [
                         'rel' => 'self',
-                        'href' => 'https://servicesextcert.deere.com/dtfapi/dbs/dealer/06DV01/files'
+                        'href' => 'https://dtfapicert.deere.com/dbs/dealer/06DV01/files'
                     ]
                 ],
             ]))
@@ -636,11 +636,11 @@ final class ApiClientTest extends TestCase
                 'links' => [
                     [
                         'rel' => 'download',
-                        'href' => 'https://servicesextcert.deere.com/dtfapi/dbs/dealer/06DV01/files/samplecommonfile.txt'
+                        'href' => 'https://dtfapicert.deere.com/dbs/dealer/06DV01/files/samplecommonfile.txt'
                     ],
                     [
                         'rel' => 'self',
-                        'href' => 'https://servicesextcert.deere.com/dtfapi/dbs/dealer/06DV01/files/samplecommonfile.txt/details'
+                        'href' => 'https://dtfapicert.deere.com/dbs/dealer/06DV01/files/samplecommonfile.txt/details'
                     ],
                 ],
             ])))
